@@ -6,6 +6,15 @@ public class Attack {
 
         if (attacker.getElement().getElement() == element.getElement()) multiplier *= 1.5;
 
+        int damage;
+
+        if (attacker.getWeapon() == null) damage = 0;
+        else damage = attacker.getWeapon().getInitialDamage();
+        if (attacker.getEquipement() != null) damage *= attacker.getEquipement().getBoost();
+
+        damage *= multiplier;
+
+        defender.hurt(damage);
     }
 
     public static double checkAvantage(Element elementAttacker, Fighter defender) {
