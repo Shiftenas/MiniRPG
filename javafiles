@@ -6,7 +6,10 @@ src/features/Equipement.java
 src/features/Body.java
 src/features/Leggings.java
 src/features/Weapon.java
-src/Fighter.java
-src/Player.java
-src/Main.java
 src/Attack.java
+src/characters/Player.java
+src/characters/Fighter.java
+src/characters/PlayerGraphic.java
+src/characters/EnnemyGraphic.java
+src/MainFrame.java
+src/Main.java

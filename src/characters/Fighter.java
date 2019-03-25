@@ -1,3 +1,5 @@
+package characters;
+
 import features.*;
 import attacks.*;
 
@@ -124,19 +126,9 @@ public class Fighter {
 
     @Override
     public String toString() {
-        return "Fighter{" +
-                "element=" + element +
-                ", MAX_HP=" + MAX_HP +
-                ", hp=" + hp +
-                ", MAX_MANA=" + MAX_MANA +
-                ", mana=" + mana +
-                ", CLASS=" + CLASS +
-                ", weapon=" + weapon +
-                ", name='" + name + '\'' +
-                ", equipement=" + equipement +
-                ", helmet=" + helmet +
-                ", armor=" + armor +
-                ", leggings=" + leggings +
-                '}';
+        return "Fighter : " + name +
+                " Type : " + element + " " + CLASS +
+                "\nHP : " + hp + "/" + MAX_HP +
+                ", MANA : " + mana +  "/" + MAX_MANA;
     }
 }

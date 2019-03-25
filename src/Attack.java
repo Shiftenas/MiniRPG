@@ -1,4 +1,5 @@
 import attacks.Element;
+import characters.Fighter;
 
 public class Attack {
     public static void attack(Fighter attacker, Fighter defender, Element element) {
@@ -14,6 +15,14 @@ public class Attack {
 
         damage *= multiplier;
 
+        float defense = 1;
+
+        if (defender.getHelmet() != null) defense += defender.getHelmet().getDefense();
+        if (defender.getArmor() != null) defense += defender.getArmor().getDefense();
+        if (defender.getLeggings() != null) defense += defender.getLeggings().getDefense();
+
+        damage = Math.round(damage/defense);
+
         defender.hurt(damage);
     }
 
@@ -21,22 +30,22 @@ public class Attack {
         Element elementDefender = defender.getElement();
         switch (elementAttacker.getElement()) {
             case Element.DARK:
-                if (defender.getElement().getElement() == Element.LIGHT) return 2;
+                if (elementDefender.getElement() == Element.LIGHT) return 2;
                 return 1;
             case Element.LIGHT:
-                if (defender.getElement().getElement() == Element.DARK) return 2;
+                if (elementDefender.getElement() == Element.DARK) return 2;
                 return 1;
             case Element.FIRE:
-                if (defender.getElement().getElement() == Element.EARTH) return 2;
-                if (defender.getElement().getElement() == Element.WATER) return 0.5;
+                if (elementDefender.getElement() == Element.EARTH) return 2;
+                if (elementDefender.getElement() == Element.WATER) return 0.5;
                 return 1;
             case Element.WATER:
-                if (defender.getElement().getElement() == Element.FIRE) return 2;
-                if (defender.getElement().getElement() == Element.EARTH) return 0.5;
+                if (elementDefender.getElement() == Element.FIRE) return 2;
+                if (elementDefender.getElement() == Element.EARTH) return 0.5;
                 return 1;
             case Element.EARTH:
-                if (defender.getElement().getElement() == Element.WATER) return 2;
-                if (defender.getElement().getElement() == Element.FIRE) return 0.5;
+                if (elementDefender.getElement() == Element.WATER) return 2;
+                if (elementDefender.getElement() == Element.FIRE) return 0.5;
                 return 1;
             default:
                 return 1;

@@ -1,3 +1,5 @@
+package characters;
+
 import attacks.Element;
 import features.WeaponClasses;
 
@@ -19,16 +21,37 @@ public class Player extends Fighter {
             case "Fire":
                 e = new Element(Element.FIRE);
                 break;
+            case "Feu":
+                e = new Element(Element.FIRE);
+                break;
             case "Water":
+                e = new Element(Element.WATER);
+                break;
+            case "Eau":
                 e = new Element(Element.WATER);
                 break;
             case "Earth":
                 e = new Element(Element.EARTH);
                 break;
+            case "Terre":
+                e = new Element(Element.EARTH);
+                break;
             case "Light":
                 e = new Element(Element.LIGHT);
                 break;
+            case "Lumière":
+                e = new Element(Element.LIGHT);
+                break;
+            case "Lumiere":
+                e = new Element(Element.LIGHT);
+                break;
             case "Dark":
+                e = new Element(Element.DARK);
+                break;
+            case "Ténèbres":
+                e = new Element(Element.DARK);
+                break;
+            case "Tenebres":
                 e = new Element(Element.DARK);
                 break;
             default:
@@ -67,7 +90,7 @@ public class Player extends Fighter {
 
     public String toString() {
         String text = super.toString();
-        String recup = text.substring(text.indexOf('{'));
-        return "Player{" + recup;
+        String recup = text.substring(text.indexOf(':'));
+        return "Player " + recup;
     }
 }

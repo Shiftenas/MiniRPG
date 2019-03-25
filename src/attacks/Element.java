@@ -25,12 +25,12 @@ public class Element {
     @Override
     public String toString() {
         switch (element) {
-            case (FIRE) : return "FIRE";
-            case (WATER) : return "WATER";
-            case (EARTH) : return "EARTH";
-            case (LIGHT) : return "LIGHT";
-            case (DARK) : return "DARK";
-            default : return "NONE";
+            case (FIRE) : return "Feu";
+            case (WATER) : return "Eau";
+            case (EARTH) : return "Terre";
+            case (LIGHT) : return "Lumière";
+            case (DARK) : return "Ténèbres";
+            default : return "Vide";
         }
     }
 }
