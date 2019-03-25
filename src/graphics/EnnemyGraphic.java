@@ -1,4 +1,6 @@
-package characters;
+package graphics;
+
+import characters.Fighter;
 
 import javax.swing.*;
 import java.awt.*;
