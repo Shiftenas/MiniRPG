@@ -1,0 +1,12 @@
+src/attacks/Element.java
+src/features/Armor.java
+src/features/Helmet.java
+src/features/WeaponClasses.java
+src/features/Equipement.java
+src/features/Body.java
+src/features/Leggings.java
+src/features/Weapon.java
+src/Attack.java
+src/Fighter.java
+src/Main.java
+src/Player.java

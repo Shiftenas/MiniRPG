@@ -41,12 +41,16 @@ public class Player extends Fighter {
         switch (clas) {
             case ("Mage") :
                 p = new Player(name, e, hp, mana, WeaponClasses.MAGIC);
+                break;
             case ("Archer") :
                 p = new Player(name, e, hp, mana, WeaponClasses.BOW);
+                break;
             case ("Gunsliger") :
                 p = new Player(name, e, hp, mana, WeaponClasses.GUN);
+                break;
             default :
                 p = new Player(name, e, hp, mana, WeaponClasses.SWORD);
+                break;
         }
 
         return p;

@@ -18,4 +18,9 @@ public class Weapon {
     public WeaponClasses getWClass() {
         return CLASS;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + INITIAL_DAMAGE + " " + CLASS;
+    }
 }

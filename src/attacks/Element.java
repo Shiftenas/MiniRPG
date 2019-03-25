@@ -21,4 +21,16 @@ public class Element {
     public boolean equals(Element e) {
         return (this.element == e.getElement());
     }
+
+    @Override
+    public String toString() {
+        switch (element) {
+            case (FIRE) : return "FIRE";
+            case (WATER) : return "WATER";
+            case (EARTH) : return "EARTH";
+            case (LIGHT) : return "LIGHT";
+            case (DARK) : return "DARK";
+            default : return "NONE";
+        }
+    }
 }
